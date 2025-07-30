@@ -295,7 +295,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    fstab.qcom.vendor_ramdisk \
     init.class_main.sh \
     init.oplus.rc \
     init.kernel.post_boot.sh \
@@ -406,13 +405,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
-# OpenDelta
-ifeq ($(TARGET_BUILD_GAPPS),true)
-    PRODUCT_PACKAGES += op8650OpenDeltaOverlay
-else
-    PRODUCT_PACKAGES += op8650OpenDeltaOverlayVanilla
-endif
-
 # OSENSE
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.osense.client-service
@@ -422,7 +414,7 @@ $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-yaap
+    $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -572,11 +564,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml \
     telephony-ext
 
-ifneq ($(TARGET_BUILD_GAPPS),true)
-PRODUCT_PACKAGES += \
-    OpenEUICC
-endif
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
@@ -595,7 +582,6 @@ $(call soong_config_set,qti_thermal,netlink,true)
 
 # Touch
 PRODUCT_PACKAGES += \
-    TouchGestures \
     vendor.lineage.touch@1.0-service.oplus
 
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)

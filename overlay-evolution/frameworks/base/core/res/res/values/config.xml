@@ -31,10 +31,9 @@
     <integer name="config_singleTapDelay">250</integer>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oem_charger_path">/sys/class/oplus_chg/battery/fast_charge</string>
-
-    <!-- Whether to force enable multi resolution configuration for camera -->
-    <bool name="config_forceMultiResolution">true</bool>
+    <string
+        name="config_oem_charger_path"
+    >/sys/class/oplus_chg/battery/fast_charge</string>
 
     <!-- Whether device supports increased touch sensitvity -->
     <bool name="config_supportGloveMode">true</bool>
