@@ -223,6 +223,10 @@ service fan_control_turn_off /vendor/bin/fan_service 0
     oneshot
 
 on property:vendor.post_boot.parsed=1
+    # dex2oat settings
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
+
     # Uclamp tunings
     setprop kernel.sched_util_clamp_min_rt_default 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
