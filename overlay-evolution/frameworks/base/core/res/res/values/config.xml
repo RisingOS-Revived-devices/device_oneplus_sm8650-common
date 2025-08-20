@@ -38,6 +38,4 @@
     <!-- Whether device supports increased touch sensitvity -->
     <bool name="config_supportGloveMode">true</bool>
 
-    <!-- Absolute path of the DC dimming node -->
-    <string name="config_dcdNodePath">/sys/kernel/oplus_dc_dim/dc_dim_enable</string>
 </resources>

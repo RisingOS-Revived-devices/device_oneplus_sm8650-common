@@ -12,4 +12,5 @@
 
     <!-- Show high touch polling rate -->
     <bool name="config_supportHighTouchRate">true</bool>
+
 </resources>
