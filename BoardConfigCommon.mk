@@ -98,9 +98,6 @@ DEVICE_MANIFEST_FILE := \
 ODM_MANIFEST_FILES := \
     $(COMMON_PATH)/network_manifest_odm.xml
 
-# Init
-$(call soong_config_set,lineage_init,init_vendor_lib,$(COMMON_PATH)/libinit_oplus)
-
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)

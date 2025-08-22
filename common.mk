@@ -309,6 +309,8 @@ PRODUCT_PACKAGES += \
     ueventd.oplus.rc \
     ueventd.qcom.rc
 
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
+
 # Identity
 PRODUCT_PACKAGES += \
     android.hardware.identity-V5-ndk.vendor
