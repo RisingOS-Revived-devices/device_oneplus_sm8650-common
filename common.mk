@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-V1-ndk.vendor \
@@ -264,6 +265,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-V2-ndk.vendor \
     android.hardware.health@1.0.vendor \
     android.hardware.health@2.1.vendor
+
+# Lineage Health
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
 
 # HIDL
 PRODUCT_PACKAGES += \
