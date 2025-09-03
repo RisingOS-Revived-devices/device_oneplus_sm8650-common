@@ -217,9 +217,6 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-# Touch
-$(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(COMMON_PATH)/touch/include)
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
