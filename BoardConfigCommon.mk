@@ -216,6 +216,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # SEPolicy
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr/sm8650/SEPolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

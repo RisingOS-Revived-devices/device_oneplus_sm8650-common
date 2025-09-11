@@ -506,7 +506,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice-V1-ndk.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors-V2-ndk.vendor \
-    android.hardware.sensors-service.oplus-multihal \
     libdumpstateutil.vendor \
     libsensorndkbridge \
     sensors.dynamic_sensor_hal \
@@ -592,9 +591,6 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,qti_thermal,netlink,true)
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
-
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 
 # Trusted User Interface
