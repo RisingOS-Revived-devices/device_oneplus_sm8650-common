@@ -293,3 +293,4 @@ usb_f_rndis.ko
 videocc-pineapple.ko
 videocc-volcano.ko
 wcd_usbss_i2c.ko
+dcvs_boost.ko
